@@ -25,7 +25,7 @@ async def on_ready():
 
 
 
-@bot.slash_command(name="성인이미지판별",description="성인 이미지나 노출된 이미지 여부를 판단하여 점수로 보여줍니다.")
+@bot.slash_command(name="성인이미지판별",description="성인 이미지나 노출된 이미지 여부를 판단하여 %로 보여줍니다.")
 async def adult(inter: disnake.ApplicationCommandInteraction, image_url: str):
     headers = {'Authorization': 'KakaoAK {}'.format(MYAPP_KEY)}
     await inter.response.send_message(f"판별중입니다\n기다려 주세요")
